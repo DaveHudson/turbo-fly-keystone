@@ -1,9 +1,9 @@
 {
-  "name": "keystone-app",
+  "name": "keystone",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "keystone dev",
+    "dev": "keystone dev -p",
     "start": "keystone start",
     "build": "keystone build",
     "postinstall": "keystone postinstall"
