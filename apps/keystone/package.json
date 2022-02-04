@@ -6,7 +6,7 @@
     "dev": "keystone dev -p",
     "start": "keystone start",
     "build": "keystone build",
-    "postinstall": "keystone postinstall"
+    "postinstall": "keystone postinstall && cp -R ./node_modules/.prisma ../blog/node_modules && cp -R ./node_modules/.keystone ../blog/node_modules"
   },
   "dependencies": {
     "@keystone-6/auth": "^1.0.1",

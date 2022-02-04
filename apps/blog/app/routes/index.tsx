@@ -1,4 +1,15 @@
 import { Button } from "ui";
+import { Post, PrismaClient } from "@prisma/client";
+import { LoaderFunction } from "remix";
+
+export const loader: LoaderFunction = async () => {
+  let db = new PrismaClient();
+  const posts = await db.post.findMany({
+    take: 20,
+  });
+
+  return posts as Post[];
+};
 
 export default function Index() {
   return (
