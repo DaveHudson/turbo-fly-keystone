@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "keystone postinstall && npm run sharegeneratedschema",
+    "sharegeneratedschema": "cp -R ./node_modules/.prisma ../blog/node_modules && cp -R ./node_modules/.keystone ../blog/node_modules",
     "dev": "keystone dev -p",
     "start": "keystone start",
-    "build": "keystone build",
-    "postinstall": "keystone postinstall && cp -R ./node_modules/.prisma ../blog/node_modules && cp -R ./node_modules/.keystone ../blog/node_modules"
+    "build": "keystone build"
   },
   "dependencies": {
     "@keystone-6/auth": "^1.0.1",
